@@ -1,3 +1,17 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "content": "some other note",
+      "id": 1751110843957,
+      "tags": [
+        "random",
+        "not serious"
+      ]
+    },
+    {
+      "content": "moreeeeee notes",
+      "id": 1751110865543,
+      "tags": []
+    }
+  ]
 }
