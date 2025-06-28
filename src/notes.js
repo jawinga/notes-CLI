@@ -38,4 +38,5 @@ export const deleteNote = async (id) => {
 
 export const deleteAllNotes = async () => {
   await saveDB({ notes: [] });
+  return [];
 };

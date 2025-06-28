@@ -1,6 +1,12 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { createNote, getNotes, findNote, deleteNote } from "./notes.js";
+import {
+  createNote,
+  getNotes,
+  findNote,
+  deleteNote,
+  deleteAllNotes,
+} from "./notes.js";
 
 yargs(hideBin(process.argv))
   .command(
@@ -84,8 +90,8 @@ yargs(hideBin(process.argv))
     "clear all notes",
     () => {},
     async (argv) => {
-      console.log("Clearing all notes...");
-      // TODO: implement clearNotes()
+      const notes = await deleteAllNotes();
+      console.log("The arrays length is: ", notes.length);
     }
   )
 
