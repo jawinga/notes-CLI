@@ -17,8 +17,10 @@ export const getNotes = async () => {
 
 export const findNote = async (filter) => {
   const { notes } = await getDB();
+  const lowerFilter = filter.toLowerCase();
+
   return notes.filter((note) =>
-    note.content.toLowerCase().includes(filter).toLowerCase()
+    note.content.toLowerCase().includes(lowerFilter)
   );
 };
 
